@@ -1,0 +1,14 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Coding algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --run --globals"
+  },
+  "author": "Jen",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^0.34.6"
+  }
+}
