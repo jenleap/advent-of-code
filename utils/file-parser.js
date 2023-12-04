@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const basicFileHelper = (inputFile, callback) => {
+const fileParser = (inputFile) => {
     return new Promise((resolve, reject) => {
         fs.readFile(inputFile, 'utf8' , (err, data) => {
             if (err) {
@@ -8,9 +8,9 @@ const basicFileHelper = (inputFile, callback) => {
               return;
             }
     
-            resolve(callback(data));
+            resolve(data);
         });
     })
 };
 
-module.exports = basicFileHelper;
+module.exports = fileParser;
