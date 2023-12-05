@@ -31,17 +31,15 @@ const checkWins = (card) => {
 
 
 const calculateScratchTicketWorth = (input) => {
-    fileParser(input).then((data) => {
+    return fileParser(input).then((data) => {
         const cards = formartScratchCard(data);
         const cardWorth = cards.map(card => checkWins(card));
-        const cardsTotal = cardWorth.reduce((acc, cardTotal) => {
+        return cardWorth.reduce((acc, cardTotal) => {
             return acc + cardTotal;
         }, 0);
-        console.log(cardsTotal);
-        return cardsTotal;
     })
 }
 
-console.log(calculateScratchTicketWorth('./2023/day-four/input.txt'));
+calculateScratchTicketWorth('./2023/day-four/input.txt').then(result => console.log(result));
 
 module.exports = calculateScratchTicketWorth;
