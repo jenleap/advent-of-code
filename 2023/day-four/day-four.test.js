@@ -1,7 +1,7 @@
 const calculateScratchTicketWorth = require('./problem-one');
 const countScratchCards = require('./problem-two');
 
-describe('2023 day one', () => {
+describe('2023 day four', () => {
     it('should be worth 13pts', () => {
         const solution = 13; 
         calculateScratchTicketWorth('./2023/day-four/test-input.txt')
