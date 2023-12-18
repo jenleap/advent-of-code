@@ -120,11 +120,6 @@ const formatLoopSketch = (data) => {
     return data.split("\n").map(row => row.split(""));
 }
 
-const hasMoreTiles = (stepSketch) => {
-    console.log(stepSketch);
-    return stepSketch.map(row => row.includes('X') || row.includes('.')).filter(bool => bool).length > 0;
-}
-
 const createStepSketch = (loopSketch) => {
     const stepSketch = [...Array(loopSketch.length)].map(row => Array(loopSketch[0].length).fill("X"));
     for (let i = 0; i < loopSketch.length; i++) {
